@@ -53,7 +53,14 @@ export const addCate = (data) =>{
   })
 }
 
-
+// 添加规格管理列表
+export const addSpec = (data) =>{
+  return axios({
+    method:'post',
+    url: baseUrl+'/api/specsadd',
+    data:qs.stringify(data)
+  })
+}
 
 // 菜单列表
 export const getMenu = (params) => {
@@ -89,6 +96,15 @@ export const getCate = (params)=>{
   return axios({
     method:'get',
     url:baseUrl+'/api/catelist',
+    params
+  })
+}
+
+// 商品规则列表
+export const getSpec = (params)=>{
+  return axios({
+    method:'get',
+    url:baseUrl+'/api/specslist',
     params
   })
 }
@@ -128,6 +144,14 @@ export const updateCate = (data) =>{
     data:form
   })
 }
+// 修改商品规格
+export const updateSpec = (data) =>{
+  return axios({
+    method:'post',
+    url:baseUrl+'/api/specsedit',
+    data:qs.stringify(data)
+  })
+}
 // 删除菜单
 export const delMenu = (data) => {
   return axios({
@@ -163,6 +187,14 @@ export const delCate = (data) =>{
   })
 }
 
+// 删除规格列表
+export const delSpec = (data) =>{
+  return axios({
+    method:'post',
+    url:baseUrl+'/api/specsdelete',
+    data:qs.stringify(data)
+  })
+}
 // 获取一条菜单
 export const oneMenu = (params) => {
   return axios({
@@ -197,12 +229,27 @@ export const oneCate = (params) =>{
     params,
   })
 }
-
+// 获取一条商品规格
+export const oneSpec = (params) =>{
+  return axios({
+    method:'get',
+    url:baseUrl+'/api/specsinfo',
+    params,
+  })
+}
 // 获取管理员总数
 export const managerCount = () =>{
   return axios({
     method:'get',
     url:baseUrl+'/api/usercount',
+  })
+}
+
+// 获取商品规格总数
+export const specCount = () =>{
+  return axios({
+    method:'get',
+    url:baseUrl+'/api/specscount',
   })
 }
 

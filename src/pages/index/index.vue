@@ -31,7 +31,7 @@
           </template>
           <el-menu-item-group>
             <el-menu-item index="/cate">商品分类</el-menu-item>
-            <el-menu-item index="3-2">商品规格</el-menu-item>
+            <el-menu-item index="/spec">商品规格</el-menu-item>
             <el-menu-item index="3-3">商品管理</el-menu-item>
             <el-menu-item index="3-4">会员管理</el-menu-item>
             <el-menu-item index="3-5">轮播图管理</el-menu-item>
